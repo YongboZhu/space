@@ -1,4 +1,40 @@
 <!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>SPACE-狼导</title>
+  <link rel="shortcut icon" href="https://space.volf.club/favicon.ico">
+  <link rel="apple-touch-icon" href="https://space.volf.club/favicon.ico">
+  
+  <script type="text/javascript">var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");var browser = navigator.userAgent.toLowerCase();var isMobile = false;for (var i=0; i<mobileAgent.length; i++){    if (browser.indexOf(mobileAgent[i])!=-1){
+        isMobile = true;        //alert(mobileAgent[i]);
+        location.href = 'https://volf.club/';        break;
+    }
+}</script>
+  
+  <style>
+      .botCenter{width:100%; height:35px; line-height:35px;  position:fixed; bottom:0px; left:0px; font-size:14px; text-align:center;}
+  </style>
+</head>
+<body>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?57cf1268909c225841d2d5477ccb65c7";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+
+<div class="botCenter">
+    <a href="https://volf.club/" target="_blank" style="text-decoration:none;">群狼动力</a>&nbsp;&&nbsp;
+    <a href="https://github.com/cadejscroggins/tilde" target="_blank" style="text-decoration:none;">Tilde</a>&nbsp;|&nbsp;
+    <abbr title="指令+空格+内容=搜索；点击时钟查看指令 😉" style="text-decoration:none;">提示💡</abbr>&nbsp;|&nbsp;
+    <a href="https://space.volf.club/" target="_blank" style="text-decoration:none;">Space 🚀</a>
+</div>
 
 <script>
   const CONFIG = {
@@ -9,161 +45,234 @@
      */
     commands: [
       {
-        name: 'Google',
+        name: 'Baidu',
         key: '*',
-        url: 'https://encrypted.google.com',
-        search: '/search?q={}',
+        url: 'https://www.baidu.com',
+        search: '/s?&wd={}',
+        color: '#515C6B',
+      },
+      {
+        category: '搜索',
+        name: '百度',
+        key: '*',
+        url: 'https://www.baidu.com',
+        search: '/s?&wd={}',
         color: '#000',
       },
       {
-        category: 'Work',
-        name: 'Drive',
-        key: 'd',
-        url: 'https://drive.google.com',
-        search: '/drive/search?q={}',
-        color: 'linear-gradient(135deg, #4285f4, #4259f4)',
+        category: '搜索',
+        name: '必应',
+        key: 'b',
+        url: 'https://cn.bing.com/',
+        search: '/search?q={}',
+        color: 'linear-gradient(135deg, #00809D, #10B6B6)',
       },
       {
-        category: 'Work',
-        name: 'GitHub',
+        category: '搜索',
+        name: '谷歌',
         key: 'g',
+        url: 'https://encrypted.google.com',
+        search: '/search?q={}',
+        color: 'linear-gradient(135deg, #1A73E8, #408AEC)',
+      },
+      {
+        category: '热门',
+        name: '知乎',
+        key: 'zh',
+        url: 'https://www.zhihu.com',
+        search: '/search?type=content&q={}',
+        color: 'linear-gradient(135deg, #0084FF, #8590A6)',
+      },
+      {
+        category: '热门',
+        name: '微博',
+        key: 'wb',
+        url: 'http://s.weibo.com',
+        search: '/weibo/{}',
+        color: 'linear-gradient(135deg, #F85D00, #E6162D)',
+      },
+      {
+        category: '热门',
+        name: '微信',
+        key: 'wx',
+        url: 'http://weixin.sogou.com',
+        search: '/weixin?type=2&query={}',
+        color: 'linear-gradient(135deg, #00A06A, #00D500)',
+      },
+      {
+        category: '热门',
+        name: '豆瓣',
+        key: 'db',
+        url: 'https://www.douban.com',
+        search: '/search?q={}',
+        color: 'linear-gradient(135deg, #42BD56, #97D9A1)',
+      },
+      {
+        category: '热门',
+        name: '头条',
+        key: 'tt',
+        url: 'https://www.toutiao.com',
+        search: '/search/?keyword={}',
+        color: 'linear-gradient(135deg, #EF5353, #F48C8C)',
+      },
+      {
+        category: '发现',
+        name: 'GitHub',
+        key: 'gh',
         url: 'https://github.com',
         search: '/search?q={}',
-        color: 'linear-gradient(135deg, #8ccae1, #6dabd6)',
+        color: 'linear-gradient(135deg, #24292E, #363D44)',
       },
       {
-        category: 'Work',
-        name: 'Keep',
-        key: 'k',
-        url: 'https://keep.google.com',
-        search: '/#search/text={}',
-        color: 'linear-gradient(135deg, #fca550, #fcd050)',
-      },
-      {
-        category: 'Lurk',
-        name: 'Hunt',
-        key: 'p',
+        category: '发现',
+        name: 'ProductHunt',
+        key: 'ph',
         url: 'https://www.producthunt.com',
         search: '/search?q={}',
         color: 'linear-gradient(135deg, #da552f, #da802f)',
       },
       {
-        category: 'Lurk',
-        name: 'Reddit',
-        key: 'r',
-        url: 'https://www.reddit.com',
-        search: '/search?q={}',
-        color: 'linear-gradient(135deg, #5f99cf, #5f7dcf)',
+        category: '发现',
+        name: 'AlternativeTo',
+        key: 'a2',
+        url: 'https://alternativeto.net',
+        search: '/browse/search?q={}',
+        color: 'linear-gradient(135deg, #5581A6, #30A5EF)',
       },
       {
-        category: 'Lurk',
+        category: '发现',
+        name: '站酷',
+        key: 'zk',
+        url: 'https://www.zcool.com.cn',
+        search: '/search/content?&word={}',
+        color: 'linear-gradient(135deg, #FFE300, #999999)',
+      },
+      {
+        category: '发现',
+        name: '花瓣',
+        key: 'hb',
+        url: 'https://huaban.com',
+        search: '/search/?q={}',
+        color: 'linear-gradient(135deg, #D61718, #E05153)',
+      },
+      {
+        category: '知识',
+        name: '语雀',
+        key: 'yq',
+        url: 'https://www.yuque.com/',
+        search: '/search?q={}',
+        color: 'linear-gradient(135deg, #25B668, #FAFAFA)',
+      },
+      {
+        category: '知识',
+        name: '百度学术',
+        key: 'bx',
+        url: 'https://xueshu.baidu.com',
+        search: '/s?wd={}',
+        color: 'linear-gradient(135deg, #002147, #5ACAFB)',
+      },
+      {
+        category: '知识',
+        name: 'MBAlib',
+        key: 'mb',
+        url: 'https://wiki.mbalib.com',
+        search: '/wiki/Special:Search?search={}',
+        color: 'linear-gradient(135deg, #0E62AC, #FF9900)',
+      },
+      {
+        category: '知识',
+        name: 'indienova',
+        key: 'in',
+        url: 'https://indienova.com',
+        search: '/search/all/{}',
+        color: 'linear-gradient(135deg, #EB4E30, #EC7660)',
+      },
+      {
+        category: '知识',
+        name: '萌娘百科',
+        key: 'mn',
+        url: 'https://zh.moegirl.org',
+        search: '/{}',
+        color: 'linear-gradient(135deg, #26CA9B, #008000)',
+      },
+      {
+        category: '生活',
+        name: '网易云音乐',
+        key: 'wy',
+        url: 'https://music.163.com',
+        search: '/#/search/m/?s={}',
+        color: 'linear-gradient(135deg, #C20C0C, #242424)',
+      },
+      {
+        category: '生活',
+        name: '哔哩哔哩',
+        key: 'bl',
+        url: 'https://search.bilibili.com/',
+        search: '/all?keyword={}',
+        color: 'linear-gradient(135deg, #F45A8D, #00A1D6)',
+      },
+      {
+        category: '生活',
+        name: '什么值得买',
+        key: 'zd',
+        url: 'https://search.smzdm.com',
+        search: '/?c=home&s={}&v=b',
+        color: 'linear-gradient(135deg, #E72929, #FD573B)',
+      },
+      {
+        category: '生活',
+        name: '厨房故事',
+        key: 'cf',
+        url: 'https://www.chufanggushi.com',
+        search: '/sou-xun/?search={}',
+        color: 'linear-gradient(135deg, #FFCD02, #FAF5F0)',
+      },
+      {
+        category: '生活',
+        name: '默沙东医疗手册',
+        key: 'ms',
+        url: 'https://www.msdmanuals.cn',
+        search: '/首页/SearchResults?query={}',
+        color: 'linear-gradient(135deg, #00A3A1, #F9A75E)',
+      },
+      {
+        category: '图片',
+        name: 'Pixiv',
+        key: 'pz',
+        url: 'https://www.pixiv.net/',
+        search: '/search.php?word={}',
+        color: 'linear-gradient(135deg, #7EBA22, #49C0F0)',
+      },
+      {
+        category: '图片',
+        name: 'Pixabay',
+        key: 'px',
+        url: 'https://pixabay.com',
+        search: '/zh/images/search/{}',
+        color: 'linear-gradient(135deg, #2BB765, #979797)',
+      },
+      {
+        category: '图片',
         name: 'Unsplash',
-        key: 'u',
-        url: 'https://unsplash.com/new',
+        key: 'us',
+        url: 'https://unsplash.com',
+        search: '/s/photos/{}',
+        color: 'linear-gradient(135deg, #000000, #EEEEEE)',
+      },
+      {
+        category: '图片',
+        name: 'Furaffinity',
+        key: 'fa',
+        url: 'https://www.furaffinity.net',
         search: '/search/{}',
-        color: '#000',
-      },
-      {
-        category: 'Listen',
-        name: 'Hypem',
-        key: 'h',
-        url: 'https://hypem.com/popular',
-        search: '/search/{}',
-        color: 'linear-gradient(135deg, #83c441, #62c441)',
-      },
-      {
-        category: 'Listen',
-        name: 'Line Radio',
-        key: 'l',
-        url: 'https://linerad.io',
-        search: '/#{}',
-        color: 'linear-gradient(135deg, #a29bfe, #bb9bfe)',
-      },
-      {
-        category: 'Listen',
-        name: 'SoundCloud',
-        key: 's',
-        url: 'https://soundcloud.com/discover',
-        search: '/search?q={}',
-        color: 'linear-gradient(135deg, #ff8800, #ffc800)',
-      },
-      {
-        category: 'Watch',
-        name: 'Netflix',
-        key: 'n',
-        url: 'https://www.netflix.com/browse',
-        search: '/search?q={}',
-        color: 'linear-gradient(135deg, #e50914, #e53509)',
-      },
-      {
-        category: 'Watch',
-        name: 'Twitch',
-        key: 't',
-        url: 'https://www.twitch.tv/directory/following',
-        color: 'linear-gradient(135deg, #6441a5, #7d41a5)',
-      },
-      {
-        category: 'Watch',
-        name: 'YouTube',
-        key: 'y',
-        url: 'https://youtube.com/feed/subscriptions',
-        search: '/results?search_query={}',
-        color: 'linear-gradient(135deg, #cd201f, #cd4c1f)',
-      },
-      {
-        category: 'Learn',
-        name: 'Academy',
-        key: 'a',
-        url: 'https://www.khanacademy.org',
-        search: '/search?page_search_query={}',
-        color: 'linear-gradient(135deg, #9cb443, #80b443)',
-      },
-      {
-        category: 'Learn',
-        name: 'Coursera',
-        key: 'c',
-        url: 'https://www.coursera.org',
-        search: '/courses?query={}',
-        color: 'linear-gradient(135deg, #407ED7, #4058d7)',
-      },
-      {
-        category: 'Learn',
-        name: 'Egghead',
-        key: 'e',
-        url: 'https://egghead.io',
-        search: '/search?q={}',
-        color: 'linear-gradient(135deg, #171C23, #171923)',
-      },
-      {
-        category: 'Download',
-        name: 'Bay',
-        key: 'b',
-        url: 'https://thepiratebay.org',
-        search: '/search/{}',
-        color: 'linear-gradient(135deg, #d2b9a6, #d2c4a6)',
-      },
-      {
-        category: 'Download',
-        name: 'YTS',
-        key: 'Y',
-        url: 'https://yts.am/browse-movies/all/1080p/all/7/latest',
-        search: '/browse-movies/{}',
-        color: 'linear-gradient(135deg, #2f2f2f, #373737)',
-      },
-      {
-        category: 'Download',
-        name: '7digital',
-        key: '7',
-        url: 'https://us.7digital.com',
-        search: '/search?q={}',
-        color: 'linear-gradient(135deg, #07606e, #07466e)',
+        color: 'linear-gradient(135deg, #8F614D, #E7C59F)',
       },
     ],
 
     /**
      * Get suggestions as you type.
      */
-    suggestions: true,
+    suggestions: false,
     suggestionsLimit: 4,
 
     /**
@@ -210,7 +319,7 @@
      * The delimiter between a command key and your search query. For example,
      * to search GitHub for potatoes, you'd type "g:potatoes".
      */
-    searchDelimiter: ':',
+    searchDelimiter: ' ',
 
     /**
      * The delimiter between a command key and a path. For example, you'd type
@@ -241,13 +350,13 @@
 <style type="text/css">
   :root {
     /* colors */
-    --background: #fff;
-    --foreground: #232931;
-    --searchBackground: #000;
-    --searchForeground: #fff;
+    --background: #FFFEFA;
+    --foreground: #515C6B;
+    --searchBackground: #515C6B;
+    --searchForeground: #FFFEFA;
 
     /* fonts */
-    --font-family: Lato, sans-serif;
+    --font-family: 'Noto Sans SC', Lato, sans-serif;
     --base-font-size: 18px;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
@@ -1319,3 +1428,5 @@
     twentyFourHour: CONFIG.twentyFourHourClock,
   });
 </script>
+
+</body>
